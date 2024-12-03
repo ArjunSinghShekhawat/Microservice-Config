@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import: "configserver:http://localhost:8085,optional:true"
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: HotelService
+      auto-index-creation: true
+      uri: mongodb://localhost:27017/HotelService
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
